@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "bg_color.css" %>
+  </head>
+  <body>
+    <h1>Welcome Page</h1>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>">
+        <%= message %>
+      </div>
+    <% end %>
+    <%= form_for :student, :url => "/welcome/check_login", :html => {:method => :post} do |f| %>
+      <p>
+        <%= f.label :Email  %><br>
+        <%= f.text_field :email %>
+      </p>
+
+      <p>
+        <%= f.label :Password  %><br>
+        <%= f.password_field :password %>
+      </p>
+
+      <p>
+        <%= f.submit :LogIn %>
+      </p>
+
+    <% end %>
+
+  </body>
+</html>

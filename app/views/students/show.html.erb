@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "bg_color.css" %>
+  </head>
+  <body>
+    <h1>Student Details</h1>
+    <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+    <%= link_to :Back, :controller => "students" %>
+    <p>
+      <strong>Name: </strong>
+      <%= @student.name %>
+    </p>
+    <p>
+      <strong>Contact No: </strong>
+      <%= @student.contact %>
+    </p>
+    <p>
+      <strong>Email Id: </strong>
+      <%= @student.email %>
+    </p>
+    <p>
+      <strong>Father Name: </strong>
+      <%= @student.father %>
+    </p>
+    <p>
+      <strong>DOB: </strong>
+      <%= @student.dob %>
+    </p>
+    <p>
+      <strong>Course: </strong>
+      <%= @student.course.name %>
+    </p>
+  </body>
+</html>

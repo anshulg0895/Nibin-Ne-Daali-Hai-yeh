@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      <%= stylesheet_link_tag "bg_color.css" %>
+    </style>
+  </head>
+  <body>
+    <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+    <%= button_to 'Add Student', new_student_path %><br>
+    <%= button_to 'Go To Courses', :controller => "course", :action => "index" %><br>
+    <h1>List of Students</h1>
+    <ol>
+      <% @students.each do |student| %>
+        <li><%= student.name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Show', student_path(student.id) %>&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Edit', edit_student_path(student) %>&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Delete', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <% end %>
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+body {
+  background-color: #94b4e8
+}
+
+#name2, #email2, #father2, #course2 {
+  width: 15vw;
+}
+#name, #email, #father {
+  font-size: 2.5vh;
+}
+#dob2, #contact2 {
+  width: 10vw;
+}
+#dob, #contact, #course {
+  font-size: 2.5vh;
+}

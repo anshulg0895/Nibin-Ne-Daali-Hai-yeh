@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "bg_color.css" %>
+  </head>
+  <body>
+    <h1>Student Registration</h1>
+    <%= link_to 'Logout', :controller => "welcome", :action => "login", :id => 'logout' %><br><br>
+    <%= link_to :Back, students_path %>
+    <%= form_for :student, url: students_path do |f| %>
+      <p>
+        <%= f.label :Name, :id => 'name' %><br>
+        <%= f.text_field :name, :required => true, :maxlength => 50, :pattern => '[a-zA-Z ]+', :id => 'name2' %>
+      </p>
+
+      <p>
+        <%= f.label 'Contact No', :id => 'contact' %><br>
+        <%= f.text_field :contact, :required => true, :minlength => 10, :maxlength => 10, :pattern => '[0-9]+', :id => 'contact2' %>
+      </p>
+
+      <p>
+        <%= f.label 'Email Id', :id => 'email' %><br>
+        <%= f.text_field :email, :required => true, :pattern => '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$', :id => 'email2' %>
+      </p>
+
+      <p>
+        <%= f.label 'Father Name', :id => 'father' %><br>
+        <%= f.text_field :father, :required => true, :maxlength => 50, :pattern => '[a-zA-Z ]+', :id => 'father2' %>
+      </p>
+
+      <p>
+        <%= f.label :DOB, :id => 'dob' %><br>
+        <%= f.text_field :dob, :required => true, :id => 'dob2' %>
+      </p>
+
+      <p>
+        <%= f.label :Course, :id => 'course' %><br>
+        <%= f.collection_select :course_id, Course.course_name, :id, :name , :prompt => 'Select One', :id => 'course2' %>
+      </p>
+
+      <p>
+        <%= f.submit :Register %>
+      </p>
+    <% end %>
+  </body>
+</html>

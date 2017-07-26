@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag "bg_color.css" %>
+  </head>
+  <body>
+    <h1>Course Detail</h1>
+    <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+    <%= link_to :Back, :controller => "course", :action => "index" %>
+      <p>
+        <strong>Course Id: </strong>
+        <%= @course.course_id %>
+      </p>
+      <p>
+        <strong>Name: </strong>
+        <%= @course.name %>
+      </p>
+      <p>
+        <strong>Duration: </strong>
+        <%= @course.duration %>
+      </p>
+      <p>
+        <strong>Fee: </strong>
+        <%= @course.fee %>
+      </p>
+      <p>
+        <strong>Coordinator: </strong>
+        <%= @course.coordinator %>
+      </p>
+  </body>
+</html>
