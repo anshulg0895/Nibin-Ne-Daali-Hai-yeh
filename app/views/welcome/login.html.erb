@@ -13,16 +13,16 @@
     <%= form_for :student, :url => "/welcome/check_login", :html => {:method => :post} do |f| %>
       <p>
         <%= f.label :Email  %><br>
-        <%= f.text_field :email %>
+        <%= f.text_field :email, :id => 'email_login' %>
       </p>
 
       <p>
         <%= f.label :Password  %><br>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, :id => 'pass_login' %>
       </p>
 
       <p>
-        <%= f.submit :LogIn %>
+        <%= f.submit :LogIn, :id => 'submit' %>
       </p>
 
     <% end %>

@@ -4,33 +4,42 @@
     <%= stylesheet_link_tag "bg_color.css" %>
   </head>
   <body>
-    <h1>Edit Course</h1>
-    <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
-    <%= form_for @course, as: :course, url: course_path(@course), method: :patch do |f| %>
-    <%= link_to :Back, :controller => "course", :action => "index" %>
-      <p>
-        <%= f.label 'Course Id' %><br>
-        <%= f.text_field :course_id %>
-      </p>
-      <p>
-        <%= f.label :Name %><br>
-        <%= f.text_field :name %>
-      </p>
-      <p>
-        <%= f.label :Duration %><br>
-        <%= f.text_field :duration %>
-      </p>
-      <p>
-        <%= f.label :Fee %><br>
-        <%= f.text_field :fee %>
-      </p>
-      <p>
-        <%= f.label :Coordinator %><br>
-        <%= f.text_field :coordinator %>
-      </p>
-      <p>
-        <%= f.submit :Update %>
-      </p>
-    <% end %>
+    <div id="body">
+      <marquee behavior="alternate">Welcome to the Sample App!</marquee>
+      <div id="header">
+        <h1>Edit Course</h1>
+      </div>
+      <div id="logout">
+        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+      </div>
+      <div id="innerBody">
+        <%= form_for @course, as: :course, url: course_path(@course), method: :patch do |f| %>
+        <%= link_to :Back, :controller => "course", :action => "index" %>
+          <p>
+            <%= f.label 'Course Id' %><br>
+            <%= f.text_field :course_id %>
+          </p>
+          <p>
+            <%= f.label :Name %><br>
+            <%= f.text_field :name %>
+          </p>
+          <p>
+            <%= f.label :Duration %><br>
+            <%= f.text_field :duration %>
+          </p>
+          <p>
+            <%= f.label :Fee %><br>
+            <%= f.text_field :fee %>
+          </p>
+          <p>
+            <%= f.label :Coordinator %><br>
+            <%= f.text_field :coordinator %>
+          </p>
+          <p>
+            <%= f.submit :Update, :id => 'update' %>
+          </p>
+        <% end %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,16 +1,97 @@
 body {
-  background-color: #94b4e8
+  background-color: #94b4e8;
 }
 
+h1 {
+  text-transform: uppercase;
+  text-shadow: -1px 0 0 #000000, 1px 1px 0 #000000,
+             2px -1px 0 #000000, 3px 0 0 #000000;
+  font-weight: lighter;
+}
+
+#add, #Goto {
+  padding: 5px 20px;
+    background: #CCCCCC;
+    border: 1px solid;
+    border-color: #AAAAAA #000000 #000000 #AAAAAA;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+#email_login, #pass_login, #submit, #add ,#update, #register {
+  border-radius: 10px;
+}
 #name2, #email2, #father2, #course2 {
+  border-radius: 10px;
   width: 15vw;
 }
 #name, #email, #father {
   font-size: 2.5vh;
 }
 #dob2, #contact2 {
-  width: 10vw;
+  border-radius: 10px;
+  width: 15vw;
 }
 #dob, #contact, #course {
   font-size: 2.5vh;
+}
+
+#header {
+  width: 50%;
+  float: left;
+}
+#logout {
+  padding-top: 2vh;
+  text-align: right;
+  height: 10vh;
+  width: 50%;
+  float: left;
+}
+#name_stu {
+  margin-left: 3.1vw;
+  margin-right: 1vw;
+}
+#email_stu {
+  margin-left: 1.9vw;
+  margin-right: 1vw;
+}
+#contact_stu {
+  margin-right: 1vw;
+  margin-left: 0.8vw;
+}
+#dob_stu {
+  margin-right: 1vw;
+  margin-left: 3.5vw;
+}
+#course_stu {
+  margin-right: 1vw;
+  margin-left: 2.7vw;
+}
+#father_stu {
+  margin-right: 1vw;
+}
+
+#id_course {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+#name_course {
+  margin-left: 2.8vw;
+  margin-right: 1vw;
+}
+#duration_course {
+  margin-right: 1vw;
+  margin-left: 1.4vw;
+}
+#fee_course {
+  margin-right: 1vw;
+  margin-left: 3.8vw;
+}
+#coordinator_course {
+  margin-right: 1vw;
+}
+#stu_name {
+  margin-bottom: 1vh;
+  margin-top: 3vh;
 }

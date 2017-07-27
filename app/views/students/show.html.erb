@@ -4,32 +4,42 @@
     <%= stylesheet_link_tag "bg_color.css" %>
   </head>
   <body>
-    <h1>Student Details</h1>
-    <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
-    <%= link_to :Back, :controller => "students" %>
-    <p>
-      <strong>Name: </strong>
-      <%= @student.name %>
-    </p>
-    <p>
-      <strong>Contact No: </strong>
-      <%= @student.contact %>
-    </p>
-    <p>
-      <strong>Email Id: </strong>
-      <%= @student.email %>
-    </p>
-    <p>
-      <strong>Father Name: </strong>
-      <%= @student.father %>
-    </p>
-    <p>
-      <strong>DOB: </strong>
-      <%= @student.dob %>
-    </p>
-    <p>
-      <strong>Course: </strong>
-      <%= @student.course.name %>
-    </p>
+    <div id="body">
+      <marquee behavior="alternate">Welcome to the Sample App!</marquee>
+      <div id="header">
+        <h1>Student Details</h1>
+      </div>
+
+      <div id="logout">
+        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+      </div>
+      <div id="innerBody">
+        <%= link_to :Back, :controller => "students" %>
+        <p>
+          <strong id="name_stu">Name: </strong>
+          <%= @student.name %>
+        </p>
+        <p>
+          <strong id="contact_stu">Contact No: </strong>
+          <%= @student.contact %>
+        </p>
+        <p>
+          <strong id="email_stu">Email Id: </strong>
+          <%= @student.email %>
+        </p>
+        <p>
+          <strong id="father_stu">Father Name: </strong>
+          <%= @student.father %>
+        </p>
+        <p>
+          <strong id="dob_stu">DOB: </strong>
+          <%= @student.dob %>
+        </p>
+        <p>
+          <strong id="course_stu">Course: </strong>
+          <%= @student.course.name %>
+        </p>
+    </div>
+  </div>
   </body>
 </html>

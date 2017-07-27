@@ -4,28 +4,37 @@
     <%= stylesheet_link_tag "bg_color.css" %>
   </head>
   <body>
-    <h1>Course Detail</h1>
-    <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
-    <%= link_to :Back, :controller => "course", :action => "index" %>
-      <p>
-        <strong>Course Id: </strong>
-        <%= @course.course_id %>
-      </p>
-      <p>
-        <strong>Name: </strong>
-        <%= @course.name %>
-      </p>
-      <p>
-        <strong>Duration: </strong>
-        <%= @course.duration %>
-      </p>
-      <p>
-        <strong>Fee: </strong>
-        <%= @course.fee %>
-      </p>
-      <p>
-        <strong>Coordinator: </strong>
-        <%= @course.coordinator %>
-      </p>
+    <div id="body">
+      <marquee behavior="alternate">Welcome to the Sample App!</marquee>
+      <div id="header">
+        <h1>Course Detail</h1>
+      </div>
+      <div id="logout">
+        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+      </div>
+      <div id="innerBody">
+        <%= link_to :Back, :controller => "course", :action => "index" %>
+          <p>
+            <strong id="id_course">Course Id: </strong>
+            <%= @course.course_id %>
+          </p>
+          <p>
+            <strong id="name_course">Name: </strong>
+            <%= @course.name %>
+          </p>
+          <p>
+            <strong id="duration_course">Duration: </strong>
+            <%= @course.duration %>
+          </p>
+          <p>
+            <strong id="fee_course">Fee: </strong>
+            <%= @course.fee %>
+          </p>
+          <p>
+            <strong id="coordinator_course">Coordinator: </strong>
+            <%= @course.coordinator %>
+          </p>
+        </div>
+      </div>
   </body>
 </html>

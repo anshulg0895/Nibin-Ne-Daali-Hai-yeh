@@ -23,7 +23,7 @@ class CourseController < ApplicationController
   def destroy
     @course = Course.find(params[:id])
     @course.destroy
-    redirect_to new_course_path
+    redirect_to course_index_path
   end
 
   def edit
