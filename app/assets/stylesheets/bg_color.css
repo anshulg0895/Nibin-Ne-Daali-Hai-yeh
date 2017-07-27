@@ -10,7 +10,7 @@ h1 {
 }
 
 #add, #Goto {
-  padding: 5px 20px;
+    padding: 5px 20px;
     background: #CCCCCC;
     border: 1px solid;
     border-color: #AAAAAA #000000 #000000 #AAAAAA;
@@ -19,7 +19,7 @@ h1 {
     color: #000000;
 }
 
-#email_login, #pass_login, #submit, #add ,#update, #register {
+#email_login, #pass_login, #submit, #add ,#update, #register, #Goto {
   border-radius: 10px;
 }
 #name2, #email2, #father2, #course2 {

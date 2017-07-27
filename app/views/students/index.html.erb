@@ -14,7 +14,7 @@
       </div>
       <div id="innerBody">
         <%= button_to 'Add Student', new_student_path, :id => 'add' %><br>
-        <%= button_to 'Go To Courses', :controller => "course", :action => "index", :id => 'Goto' %><br>
+        <%= button_to 'Go To Courses', course_index_path, :id => 'Goto' %><br>
         <ol>
           <% @students.each do |student| %>
             <li id="stu_name"><%= student.name %></li>
