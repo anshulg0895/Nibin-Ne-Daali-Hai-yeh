@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <h1>Student Registration</h1>
+    <%= link_to :Back, students_path %>
+    <%= form_for :student, url: students_path do |f| %>
+      <p>
+        <%= f.label :Name %><br>
+        <%= f.text_field :name %>
+      </p>
+
+      <p>
+        <%= f.label 'Contact No' %><br>
+        <%= f.text_field :contact %>
+      </p>
+
+      <p>
+        <%= f.label 'Email Id' %><br>
+        <%= f.text_field :email %>
+      </p>
+
+      <p>
+        <%= f.label 'Father Name' %><br>
+        <%= f.text_field :father %>
+      </p>
+
+      <p>
+        <%= f.label :Age %><br>
+        <%= f.text_field :age %>
+      </p>
+
+      <p>
+        <%= f.submit :Register %> 
+      </p>
+    <% end %>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>List of Students</h1>
+    <%= link_to 'Logout', :controller => "welcome", :action => "index" %><br><br>
+    <%= button_to 'Add Student', new_student_path %><br>
+    <%= button_to 'Go To Courses', :controller => "course", :action => "new" %><br>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Contact No</th>
+        <th>Email Id</th>
+        <th>Father Name</th>
+        <th>Age</th>
+      </tr>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.name %></td>
+          <td><%= student.contact %></td>
+          <td><%= student.email %></td>
+          <td><%= student.father %></td>
+          <td><%= student.age %></td>
+          <td><%= link_to 'Show', student_path(student) %>
+          <td><%= link_to 'Edit', edit_student_path(student) %>
+          <td><%= link_to 'Delete', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>

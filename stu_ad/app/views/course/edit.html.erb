@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Edit Course</h1>
+    <%= form_for @course, as: :course, url: course_path(@course), method: :patch do |f| %>
+      <p>
+        <%= f.label :Name %><br>
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.label :Duration %><br>
+        <%= f.text_field :duration %>
+      </p>
+      <p>
+        <%= f.label :Fee %><br>
+        <%= f.text_field :fee %>
+      </p>
+      <p>
+        <%= f.label :Coordinator %><br>
+        <%= f.text_field :coordinator %>
+      </p>
+      <p>
+        <%= f.submit :Update %>
+      </p>
+    <% end %>
+  </body>
+</html>
