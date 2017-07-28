@@ -10,17 +10,17 @@
         <h1>List of Students</h1>
       </div>
       <div id="logout">
-        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
       </div>
       <div id="innerBody">
         <%= button_to 'Add Student', new_student_path, :id => 'add' %><br>
         <%= button_to 'Go To Courses', course_index_path, :id => 'Goto' %><br>
         <ol>
           <% @students.each do |student| %>
-            <li id="stu_name"><%= student.name %></li>
-            <%= link_to 'Show', student_path(student.id) %>&nbsp;&nbsp;
-            <%= link_to 'Edit', edit_student_path(student) %>&nbsp;&nbsp;
-            <%= link_to 'Delete', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <b><li id="stu_name"><%= student.name %></li></b>
+            <b><%= link_to 'Show', student_path(student.id) %><span class="glyphicon glyphicon-check"></span>&nbsp;&nbsp;
+            <%= link_to 'Edit', edit_student_path(student) %><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;
+            <%= link_to 'Delete', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %><span class="glyphicon glyphicon-trash"></span></b>
           <% end %>
         </ol>
       </div>

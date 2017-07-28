@@ -11,10 +11,10 @@
       </div>
 
       <div id="logout">
-        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
       </div>
       <div id="innerBody">
-        <%= link_to :Back, :controller => "students" %>
+        <span class="glyphicon glyphicon-step-backward"></span><b><%= link_to :Back, :controller => "students" %></b>
         <p>
           <strong id="name_stu">Name: </strong>
           <%= @student.name %>
@@ -33,7 +33,7 @@
         </p>
         <p>
           <strong id="dob_stu">DOB: </strong>
-          <%= @student.dob %>
+          <%= @student.dob.to_date.strftime('%d/%m/%Y') %>
         </p>
         <p>
           <strong id="course_stu">Course: </strong>

@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20170725065303) do
     t.string "contact"
     t.string "email"
     t.string "father"
-    t.date "dob"
+    t.datetime "dob"
     t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

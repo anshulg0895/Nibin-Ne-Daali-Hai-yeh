@@ -10,10 +10,10 @@
         <h1>Course Detail</h1>
       </div>
       <div id="logout">
-        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
       </div>
       <div id="innerBody">
-        <%= link_to :Back, :controller => "course", :action => "index" %>
+        <span class="glyphicon glyphicon-step-backward"></span><b><%= link_to :Back, :controller => "course", :action => "index" %></b>
           <p>
             <strong id="id_course">Course Id: </strong>
             <%= @course.course_id %>

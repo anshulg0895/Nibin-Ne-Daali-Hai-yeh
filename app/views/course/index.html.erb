@@ -10,18 +10,18 @@
         <h1>List of courses</h1>
       </div>
       <div id="logout">
-        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
       </div>
       <div id="innerBody">
-        <%= link_to :Back, :controller => "students" %>
+        <span class="glyphicon glyphicon-step-backward"></span><b><%= link_to :Back, :controller => "students" %></b>
         <ul>
           <% @courses.each do |course| %>
             <div>
-              <li><%= link_to course.name, :controller => "course", :action => "show", :temp => course.id %>
+              <b><li id="course_links"><span class="glyphicon glyphicon-link"></span><%= link_to course.name, :controller => "course", :action => "show", :temp => course.id %></b>
             </div>&nbsp;
             <div>
-              <%= link_to 'Delete Course', course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp;
-              <%= link_to 'Edit Course', edit_course_path(course) %><br><br></li>
+              <%= link_to 'Edit Course', edit_course_path(course) %>&nbsp;&nbsp;</li><span class="glyphicon glyphicon-edit"></span>
+              <%= link_to 'Delete Course', course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %><span class="glyphicon glyphicon-trash"></span>
             </div>&nbsp;
           <% end %>
         </ul>

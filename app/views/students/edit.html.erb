@@ -10,37 +10,37 @@
         <h1>Edit Student Detail</h1>
       </div>
       <div id="logout">
-        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
       </div>
       <div id="innerBody">
           <%= form_for @student, as: :student, url: student_path(@student), method: :patch do |f| %>
-          <%= link_to :Back, :controller => "students" %>
+          <span class="glyphicon glyphicon-step-backward"><b></span><%= link_to :Back, :controller => "students" %></b>
           <p>
             <%= f.label :Name %><br>
-            <%= f.text_field :name %>
+            <%= f.text_field :name, :id => 'edit_name', :placeholder => 'Name' %>
           </p>
           <p>
             <%= f.label :Contact_No %><br>
-            <%= f.text_field :contact %>
+            <%= f.text_field :contact, :minlength => 10, :maxlength => 10, :id => 'edit_contact', :placeholder => 'Contact No'  %>
           </p>
           <p>
             <%= f.label :Email_Id %><br>
-            <%= f.text_field :email %>
+            <%= f.text_field :email, :id => 'edit_email', :placeholder => 'Email Id' %>
           </p>
           <p>
             <%= f.label :Father_Name %><br>
-            <%= f.text_field :father %>
+            <%= f.text_field :father, :id => 'edit_father', :placeholder => 'Father Name' %>
           </p>
           <p>
             <%= f.label :DOb %><br>
-            <%= f.text_field :dob %>
+            <%= f.text_field :dob, :value => @student.dob.strftime("%d-%m-%Y"), :id => 'edit_dob', :placeholder => 'dd-mm-yy' %>
           </p>
           <p>
             <%= f.label :Course %><br>
-            <%= f.collection_select :course_id, Course.course_name, :id, :name , :prompt => 'Select One' %>
+            <%= f.collection_select :course_id, Course.course_name, :id, :name , :prompt => 'Select One', :id => 'edit_course' %>
           </p>
           <p>
-            <%= f.submit :Update %>
+            <%= f.submit :Update, :id => 'update_stu' %>
           </p>
         <% end %>
       </div>

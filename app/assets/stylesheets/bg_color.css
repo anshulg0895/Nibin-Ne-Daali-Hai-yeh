@@ -5,10 +5,22 @@ body {
 h1 {
   text-transform: uppercase;
   text-shadow: -1px 0 0 #000000, 1px 1px 0 #000000,
-             2px -1px 0 #000000, 3px 0 0 #000000;
+             2px -1px 0 #000000, 1px 0 0 #000000;
   font-weight: lighter;
 }
-
+#edit_name, #edit_contact, #edit_email, #edit_father, #edit_dob, #edit_course {
+  border-radius: 10px;
+  padding: 1vh;
+}
+#course_links {
+  text-decoration: underline;
+  /*background-color: red;*/
+}
+#innerBody {
+  padding: 1vh;
+  margin-top: 1vh;
+  margin-left: 1vw;
+}
 #add, #Goto {
     padding: 5px 20px;
     background: #CCCCCC;
@@ -19,10 +31,11 @@ h1 {
     color: #000000;
 }
 
-#email_login, #pass_login, #submit, #add ,#update, #register, #Goto {
+#email_login2, #pass_login2, #submit, #add ,#update, #register, #Goto, #update_stu {
   border-radius: 10px;
 }
 #name2, #email2, #father2, #course2 {
+  padding: 0.5vw;
   border-radius: 10px;
   width: 15vw;
 }
@@ -30,6 +43,7 @@ h1 {
   font-size: 2.5vh;
 }
 #dob2, #contact2 {
+  padding: 0.5vw;
   border-radius: 10px;
   width: 15vw;
 }
@@ -49,6 +63,7 @@ h1 {
   float: left;
 }
 #name_stu {
+  text-align: left;
   margin-left: 3.1vw;
   margin-right: 1vw;
 }
@@ -94,4 +109,24 @@ h1 {
 #stu_name {
   margin-bottom: 1vh;
   margin-top: 3vh;
+}
+
+#header_welcome, #error_welcome {
+  padding: 1vh;
+  /*background-color: green;*/
+}
+#email_login{
+  padding: 1vh;
+    /*background-color: blue;*/
+  }
+#pass_login {
+  padding: 1vh;
+  /*background-color: red;*/
+}
+#submit {
+  margin-left: 1vw;
+}
+#course_id, #course_name, #course_duration, #course_fee, #course_coord, #update {
+  padding-left: 1vw;
+  border-radius: 10px;
 }

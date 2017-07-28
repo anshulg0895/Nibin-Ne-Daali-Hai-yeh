@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag "bg_color.css" %>
   </head>
   <body>
@@ -10,33 +11,33 @@
         <h1>Edit Course</h1>
       </div>
       <div id="logout">
-        <%= link_to 'Logout', :controller => "welcome", :action => "login" %><br><br>
+        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
       </div>
       <div id="innerBody">
         <%= form_for @course, as: :course, url: course_path(@course), method: :patch do |f| %>
-        <%= link_to :Back, :controller => "course", :action => "index" %>
+        <span class="glyphicon glyphicon-step-backward"></span><b><%= link_to :Back, :controller => "course", :action => "index" %></b>
           <p>
             <%= f.label 'Course Id' %><br>
-            <%= f.text_field :course_id %>
+            <%= f.text_field :course_id, :id => 'course_id', :placeholder => 'Course Id' %>
           </p>
           <p>
-            <%= f.label :Name %><br>
-            <%= f.text_field :name %>
+            <span class="glyphicon glyphicon-user"></span>&nbsp;<%= f.label :Name %><br>
+            <%= f.text_field :name, :id => 'course_name', :placeholder => 'Course Name' %>
           </p>
           <p>
-            <%= f.label :Duration %><br>
-            <%= f.text_field :duration %>
+            <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;<%= f.label :Duration %><br>
+            <%= f.text_field :duration, :id => 'course_duration', :placeholder => 'Course Duration' %>
           </p>
           <p>
-            <%= f.label :Fee %><br>
-            <%= f.text_field :fee %>
+            <i class="fa fa-inr" aria-hidden="true"></i>&nbsp;<%= f.label :Fee %><br>
+            <%= f.text_field :fee, :id => "course_fee", :placeholder => 'Course Fee' %>
           </p>
           <p>
-            <%= f.label :Coordinator %><br>
-            <%= f.text_field :coordinator %>
+            <span class="glyphicon glyphicon-user"></span>&nbsp;<%= f.label :Coordinator %><br>
+            <%= f.text_field :coordinator, :id => "course_coord", :placeholder => 'Course Coordinatoor' %>
           </p>
           <p>
-            <%= f.submit :Update, :id => 'update' %>
+            <b><%= f.submit :Update, :id => 'update', :id => 'update' %></b>
           </p>
         <% end %>
       </div>

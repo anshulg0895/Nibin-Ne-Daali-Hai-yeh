@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <%= stylesheet_link_tag "bg_color.css" %>
   </head>
   <body>
-    <h1>Welcome Page</h1>
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>">
-        <%= message %>
+    <div id="body_welcome">
+      <marquee behavior="alternate">Welcome to the Sample App!</marquee>
+      <div id="header_welcome">
+        <h1>Welcome Page</h1>
       </div>
-    <% end %>
-    <%= form_for :student, :url => "/welcome/check_login", :html => {:method => :post} do |f| %>
-      <p>
-        <%= f.label :Email  %><br>
-        <%= f.text_field :email, :id => 'email_login' %>
-      </p>
+      <div id="error_welcome">
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>">
+            <span class="glyphicon glyphicon-alert"></span>&nbsp;<%= message %>
+          </div>
+        <% end %>
+      </div>
+      <div id="innerBody_welcome">
+        <%= form_for :student, :url => "/welcome/check_login", :html => {:method => :post} do |f| %>
+          <p id="email_login">
+            <span class="glyphicon glyphicon-user"></span>
+            <%= f.label :Email %><br>
+            <%= f.text_field :email, :id => 'email_login2', :placeholder => "Email Address" %>
+          </p>
 
-      <p>
-        <%= f.label :Password  %><br>
-        <%= f.password_field :password, :id => 'pass_login' %>
-      </p>
+          <p id="pass_login">
+            <span class="glyphicon glyphicon-lock"></span>
+            <%= f.label :Password %><br>
+            <%= f.password_field :password, :id => 'pass_login2', :placeholder => "Password" %>
+          </p>
 
-      <p>
-        <%= f.submit :LogIn, :id => 'submit' %>
-      </p>
-
-    <% end %>
-
+          <p>
+            <b><%= f.submit :LogIn, :id => 'submit' %></b>
+          </p>
+        <% end %>
+      </div>
+    </div>
   </body>
 </html>

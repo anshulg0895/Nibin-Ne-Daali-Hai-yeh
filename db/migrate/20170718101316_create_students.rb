@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string :contact
       t.string :email
       t.string :father
-      t.date :dob
+      t.datetime :dob
       t.belongs_to :course
 
       t.timestamps
