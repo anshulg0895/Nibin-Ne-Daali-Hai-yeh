@@ -7,14 +7,20 @@
     <div id="body">
       <marquee behavior="alternate">Welcome to the Sample App!</marquee>
       <div id="header">
-        <h1>List of Students</h1>
+        <div id="header1">
+          <h1>List of Students</h1>
+        </div>
+        <div id="header2">
+          <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
+        </div>&nbsp;
+      </div>&nbsp;
+      <div id="add_div">
+        <%= button_to 'Add Student', new_student_path, :id => 'add' %><br>
       </div>
-      <div id="logout">
-        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
+      <div id="goto_div">
+        <%= button_to 'Go To Courses', course_index_path, :id => 'Goto' %><br>
       </div>
       <div id="innerBody">
-        <%= button_to 'Add Student', new_student_path, :id => 'add' %><br>
-        <%= button_to 'Go To Courses', course_index_path, :id => 'Goto' %><br>
         <ol>
           <% @students.each do |student| %>
             <b><li id="stu_name"><%= student.name %></li></b>

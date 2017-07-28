@@ -2,6 +2,13 @@ body {
   background-color: #94b4e8;
 }
 
+#add_div {
+  margin-left: 2vw;
+  margin-top: 10vh;
+}
+#goto_div {
+  margin-left: 2vw;
+}
 h1 {
   text-transform: uppercase;
   text-shadow: -1px 0 0 #000000, 1px 1px 0 #000000,
@@ -14,7 +21,6 @@ h1 {
 }
 #course_links {
   text-decoration: underline;
-  /*background-color: red;*/
 }
 #innerBody {
   padding: 1vh;
@@ -50,17 +56,20 @@ h1 {
 #dob, #contact, #course {
   font-size: 2.5vh;
 }
-
-#header {
-  width: 50%;
+#header1 {
+  float: left;
+  }
+#header2 {
+  background-color: cyan;
+  margin-left: 70vw;
   float: left;
 }
+
 #logout {
   padding-top: 2vh;
   text-align: right;
   height: 10vh;
   width: 50%;
-  float: left;
 }
 #name_stu {
   text-align: left;
