@@ -37,7 +37,7 @@ class CourseController < ApplicationController
   def update
     @course = Course.find(params[:id])
     if @course.update(name: params[:course][:name], duration: params[:course][:duration], fee: params[:course][:fee], coordinator: params[:course][:coordinator])
-      redirect_to action: "new"
+      redirect_to action: "index"
     else
       render 'edit'
     end
