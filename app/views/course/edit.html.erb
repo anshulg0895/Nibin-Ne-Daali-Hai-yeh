@@ -8,11 +8,12 @@
     <div id="body">
       <marquee behavior="alternate">Welcome to the Sample App!</marquee>
       <div id="header">
-        <h1>Edit Course</h1>
-      </div>
-      <div id="logout">
-        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
-      </div>
+        <div id="header1">
+          <h1>Edit Course</h1>
+        </div>
+        <div id="header2">
+          <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
+        </div>&nbsp;
       <div id="innerBody">
         <%= form_for @course, as: :course, url: course_path(@course), method: :patch do |f| %>
         <span class="glyphicon glyphicon-step-backward"></span><b><%= link_to :Back, :controller => "course", :action => "index" %></b>

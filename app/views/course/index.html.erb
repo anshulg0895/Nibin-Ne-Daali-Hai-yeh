@@ -7,11 +7,12 @@
     <div id="body">
       <marquee behavior="alternate">Welcome to the Sample App!</marquee>
       <div id="header">
-        <h1>List of courses</h1>
-      </div>
-      <div id="logout">
-        <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
-      </div>
+        <div id="header1">
+          <h1>List of courses</h1>
+        </div>
+        <div id="header2">
+          <b><%= link_to '<button type="button" ><span class="glyphicon glyphicon-log-out">Logout</span></button>'.html_safe, :controller => "welcome", :action => "login" %></b>
+        </div>&nbsp;
       <div id="innerBody">
         <span class="glyphicon glyphicon-step-backward"></span><b><%= link_to :Back, :controller => "students" %></b>
         <ul>

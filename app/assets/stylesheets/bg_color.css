@@ -23,7 +23,7 @@ h1 {
   text-decoration: underline;
 }
 #innerBody {
-  padding: 1vh;
+  padding: 10vh;
   margin-top: 1vh;
   margin-left: 1vw;
 }
@@ -60,9 +60,8 @@ h1 {
   float: left;
   }
 #header2 {
-  background-color: cyan;
-  margin-left: 70vw;
-  float: left;
+  margin-right: 2vw;
+  float: right;
 }
 
 #logout {
